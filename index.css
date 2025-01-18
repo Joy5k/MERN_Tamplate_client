@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color:white
+}/* Add this to your Tailwind config or global CSS */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Gray */
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker gray on hover */
+  }
+  /* Scrollbar Thumb Animation */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 200% 200%; /* Larger size for smooth animation */
+  border-radius: 5px;
+  animation: gradient-scroll 3s linear infinite; /* Animation applied */
+}
+
+::-webkit-scrollbar-track {
+  background: #170101;
+  border-radius: 5px;
+}
+
+/* Keyframes for Animation */
+@keyframes gradient-scroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
